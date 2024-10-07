@@ -566,6 +566,7 @@ text.
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 set.seed(1)
 install.packages(c("gstat", "sf", "terra", "viridis"))
@@ -605,6 +606,7 @@ Here we install and load the four R packages required by the analysis.
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 set.seed(1)
 simulate_soc <- function(polygon, ground_sample_distance=10,
@@ -720,6 +722,7 @@ known depth range.
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 polygon <- st_transform(polygon, 5070)
 ```
@@ -735,6 +738,7 @@ Model Validation Report.
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 field <- st_make_grid(polygon, cellsize = ground_sample_distance, what = "centers")
 field_coords <- st_coordinates(field)
@@ -754,6 +758,7 @@ given the names `x1` and `x2`.
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 soc_stock <- gstat(formula=z~1, locations=~x1+x2, dummy=TRUE, beta=beta,
               model=vgm(psill=psill, range=range, nugget=nugget, model=model), nmax=40)
@@ -769,6 +774,7 @@ to simulate spatially correlated values.
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 combined_matrix <- cbind(field$x1, field$x2, soc_stock$sim1)
 soc_stock_points_df <- data.frame(x = combined_matrix[, 1], y = combined_matrix[, 2],
@@ -789,6 +795,7 @@ spatial covariance:
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 sigma <- gstat(formula=z~1, locations=~x1+x2, dummy=TRUE, beta=0,
     model=vgm(psill=1, range=range, nugget=0, model=model), nmax=40)
@@ -816,6 +823,7 @@ parameter.
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 combined_matrix <- cbind(field$x1, field$x2, sigma)
 sigma_points_df <- data.frame(x = combined_matrix[, 1], y = combined_matrix[, 2],
@@ -836,6 +844,7 @@ spatial covariance:
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 error <- gstat(formula=z~1, locations=~x1+x2, dummy=TRUE, beta=0,
     model=vgm(psill=1, range=range, nugget=0, model=model), nmax=40)
@@ -852,6 +861,7 @@ step 9.
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 combined_matrix <- cbind(field$x1, field$x2, error)
 error_points_df <- data.frame(x = combined_matrix[, 1], y = combined_matrix[, 2],
@@ -870,6 +880,7 @@ stock
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 soc_stock_error <- error*sigma
 soc_stock_hat <- soc_stock + soc_stock_error
@@ -884,6 +895,7 @@ that would normally be predicted by a digital soil mapping model.
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 return(list(soc_stock=soc_stock, soc_stock_hat=soc_stock_hat,
            soc_stock_error=soc_stock_error, sigma=sigma))
@@ -905,6 +917,7 @@ each field individually.
 
 <details>
   <summary>Show Code</summary>
+
 ``` r
 set.seed(1)
 
