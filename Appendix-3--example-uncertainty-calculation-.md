@@ -684,6 +684,7 @@ simulate_soc <- function(polygon, ground_sample_distance=10,
 }
 ```
 </details>
+
 The function `simulate_soc` generates simulated SOC stock under a known
 geostatistical model, and combines them into a map of SOC stock over a
 known depth range.
@@ -1089,6 +1090,7 @@ fields <- st_read(fields_string)
 fields_sim <- vector("list", length = dim(fields)[1])
 ```
 </details>
+
 **4.** Apply the simulation function to each field:
 
 <details>
@@ -1102,6 +1104,7 @@ for (i in 1:length(fields_sim)){
 }
 ```
 </details>
+
 For each iteration, the `simulate_soc` function is called with the i-th
 field as input. The result of `simulate_soc` is assigned to the i-th
 position in the `fields_sim` list. Every element of the list contains
@@ -1125,6 +1128,8 @@ acres. Every pixel in `soc_stock_hat` represents a predicted value of
 SOC stock to a depth of 30 cm at for a single 10 by 10 meter square:
 
 $`\widehat{\text{SOC}}_{i,t}`$ (Eq. 1 in the main text).
+
+[Geostatistical simulation](geostatistical_simulation.pdf)
 
 <div style="text-align: center;">
 
