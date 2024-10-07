@@ -1656,7 +1656,9 @@ deduction**
 As described in the main text of the tool, the variance of the mean
 stock change is:
 
+```math
 $\textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t,\Delta t} - \overline{\widehat{\textit{SOC}}}_{t}\right) = \textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t,\Delta t}\right) + \textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t}\right) - 2 \rho \cdot \sqrt{{var}\left(\overline{\widehat{\textit{SOC}}}_{t,\Delta t}\right)} \cdot \sqrt{{var}\left(\overline{\widehat{\textit{SOC}}}_{t}\right)}$
+```
 (Eq. 5 in the main text)
 
 Here we illustrate how to use estimates of the variance of the mean to
@@ -1701,7 +1703,7 @@ The figure below shows the probability distribution of the mean SOC
 change, and is similar to Figure 4 on page 85 of [VM0042 version
 2.1](https://verra.org/methodologies/vm0042-improved-agricultural-land-management-v2-1/).
 Using the standard deviation of the mean stock change
-(i.e. $\sqrt{0.0105} = 0.103$, the probability of exceedance method
+(i.e. $\sqrt{0.0105} = 0.103$), the probability of exceedance method
 results in a creditable amount of of 0.556 t of SOC / hectare, or a 7.3%
 deduction relative to the nominal value. If we decrease the monitoring
 period to 2 years or 1, resulting in a nominal sequestration rate of 0.4
