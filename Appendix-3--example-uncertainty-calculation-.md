@@ -45,8 +45,6 @@ immediately follows this paragraph, which contains all the necessary
 code in a single location. Running the End-to-end code will reproduce
 all the calculations and graphics in the document.
 
-<details>
-<summary>Click to expand</summary>
 ``` r
 #End-to-end code block
 
@@ -135,8 +133,6 @@ simulate_soc <- function(polygon, ground_sample_distance=10,
                soc_stock_error=soc_stock_error, sigma=sigma))
 
 }
-<details>
-<summary>Click to expand</summary>
 
 # Major section III
 
@@ -451,7 +447,7 @@ mean(vars)
 
 # Major section 6
 
-pdf("C:/Users/boxje/Dropbox/Cloud Agronomics/Registries/Verra/Module/probability_of_exceedance.pdf", width=23/2.54, height=10/2.54)
+pdf("probability_of_exceedance.pdf", width=23/2.54, height=10/2.54)
 
 mat <- matrix(c(1,1,1,2,3,4,5,5,5),3,3, byrow=T)
 layout(mat, widths=lcm(c(7,7,7)), heights=lcm(c(1,5,2)))
@@ -531,7 +527,6 @@ for (i in 1:dim(fields)[1]){
 
 }
 ```
-<details>
 
 The document contains six major sections:
 
@@ -1073,7 +1068,7 @@ $\widehat{\text{SOC}}_{i,t}$ (Eq. 1 in the main text).
           type="application/pdf" width="800" height="800">
 <p>
 Your browser does not support PDFs. Please download the PDF to view it:
-<a href="geostatistical_simulation.pdf">Download PDF</a>.
+<a href="path/to/yourfile.pdf">Download PDF</a>.
 </p>
 </object>
 <figcaption style="text-align: left; margin-top: 10px;">
@@ -1266,13 +1261,10 @@ This loop iterates over each sampled field and extracts the values from
 `soc_stock_error` and `sigma` at the random locations identified in step
 3. The extraction is performed using these lines:
 
-<details>
-<summary>Click to expand</summary>
 ``` r
 error <- terra::extract(fields_sim[[sample_index[i]]]$soc_stock_error, terra::vect(sampled_points_list[[i]]))[,2]
 sigma <- terra::extract(fields_sim[[sample_index[i]]]$sigma, terra::vect(sampled_points_list[[i]]))[,2]
 ```
-<details>
 
 The extracted values are combined with coordinate locations into a data
 frame. The data frame has four columns `error`,`sigma` `x`, and `y`.
@@ -1355,7 +1347,7 @@ Report, as stated in Section 5.3 of the tool.
           type="application/pdf" width="800" height="800">
 <p>
 Your browser does not support PDFs. Please download the PDF to view it:
-<a href="variogram.pdf">Download PDF</a>.
+<a href="path/to/yourfile.pdf">Download PDF</a>.
 </p>
 </object>
 <figcaption style="text-align: left; margin-top: 10px;">
@@ -1593,7 +1585,7 @@ value in each case.
 <object data="probability_of_exceedance.pdf" type="application/pdf" width="800" height="350">
 <p>
 Your browser does not support PDFs. Please download the PDF to view it:
-<a href="probability_of_exceedance.pdf">Download PDF</a>.
+<a href="path/to/your/file.pdf">Download PDF</a>.
 </p>
 </object>
 <figcaption style="text-align: left; margin-top: 10px;">
