@@ -1132,7 +1132,7 @@ $\widehat{\text{SOC}}_{i,t}$ (Eq. 1 in the main text).
           type="application/pdf" width="800" height="800">
 <p>
 Your browser does not support PDFs. Please download the PDF to view it:
-<a href="path/to/yourfile.pdf">Download PDF</a>.
+<a href="geostatistical_simulation.pdf">Download PDF</a>.
 </p>
 </object>
 <figcaption style="text-align: left; margin-top: 10px;">
@@ -1449,7 +1449,7 @@ Report, as stated in Section 5.3 of the tool.
           type="application/pdf" width="800" height="800">
 <p>
 Your browser does not support PDFs. Please download the PDF to view it:
-<a href="path/to/yourfile.pdf">Download PDF</a>.
+<a href="variogram.pdf">Download PDF</a>.
 </p>
 </object>
 <figcaption style="text-align: left; margin-top: 10px;">
@@ -1716,7 +1716,7 @@ value in each case.
 <object data="probability_of_exceedance.pdf" type="application/pdf" width="800" height="350">
 <p>
 Your browser does not support PDFs. Please download the PDF to view it:
-<a href="path/to/your/file.pdf">Download PDF</a>.
+<a href="probability_of_exceedance.pdf">Download PDF</a>.
 </p>
 </object>
 <figcaption style="text-align: left; margin-top: 10px;">
