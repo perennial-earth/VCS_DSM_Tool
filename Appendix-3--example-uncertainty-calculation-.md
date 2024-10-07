@@ -523,6 +523,7 @@ for (i in 1:dim(fields)[1]){
 }
 ```
 </details>
+
 The document contains six major sections:
 
 - **I. Setting up the R environment**: This section installs the
@@ -1351,10 +1352,14 @@ boundary but not within a pixel.
 
 **6.** Combine the results across fields into a single data frame:
 
+<details>
+  <summary>Show Code</summary>
+
 ``` r
 error_data <- do.call(rbind, results_list)
 error_data <- error_data[sample(seq(1,dim(error_data)[1],1), n_samples, replace=F),]
 ```
+</details>
 
 The `do.call` function applies the function `rbind` to `results_list`.
 The result, `error_data` is a data frame with columns `error`,`sigma`
@@ -1373,6 +1378,7 @@ to fall inside the field boundary but not within a pixel.
 error_data$spe <- error_data$error/error_data$sigma
 ```
 </details>
+
 The standardized prediction error is derived by dividing the prediction
 error at each sampled location by the predictive standard deviation.
 Originally, the `simulate_soc` function produces the standardized
