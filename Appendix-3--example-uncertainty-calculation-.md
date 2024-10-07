@@ -45,6 +45,9 @@ immediately follows this paragraph, which contains all the necessary
 code in a single location. Running the End-to-end code will reproduce
 all the calculations and graphics in the document.
 
+<details>
+  <summary>Click to expand</summary>
+
 ``` r
 #End-to-end code block
 
@@ -527,7 +530,7 @@ for (i in 1:dim(fields)[1]){
 
 }
 ```
-
+</details>
 The document contains six major sections:
 
 - **I. Setting up the R environment**: This section installs the
