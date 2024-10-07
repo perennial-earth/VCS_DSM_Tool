@@ -573,6 +573,7 @@ library(sf)
 library(terra)
 library(viridis)
 ```
+</details>
 
 Here we install and load the four R packages required by the analysis.
 
