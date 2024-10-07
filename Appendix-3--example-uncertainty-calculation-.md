@@ -531,6 +531,7 @@ for (i in 1:dim(fields)[1]){
 
 }
 ```
+<details>
 
 The document contains six major sections:
 
