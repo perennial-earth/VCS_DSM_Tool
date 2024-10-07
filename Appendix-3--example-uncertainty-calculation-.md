@@ -1124,7 +1124,7 @@ The plot below shows the geostatistical simulation for one field of 320
 acres. Every pixel in `soc_stock_hat` represents a predicted value of
 SOC stock to a depth of 30 cm at for a single 10 by 10 meter square:
 
-$\widehat{\text{SOC}}_{i,t}$ (Eq. 1 in the main text).
+$`\widehat{\text{SOC}}_{i,t}`$ (Eq. 1 in the main text).
 
 <div style="text-align: center;">
 
@@ -1655,10 +1655,7 @@ deduction**
 
 As described in the main text of the tool, the variance of the mean
 stock change is:
-
-```math
-$\textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t,\Delta t} - \overline{\widehat{\textit{SOC}}}_{t}\right) = \textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t,\Delta t}\right) + \textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t}\right) - 2 \rho \cdot \sqrt{{var}\left(\overline{\widehat{\textit{SOC}}}_{t,\Delta t}\right)} \cdot \sqrt{{var}\left(\overline{\widehat{\textit{SOC}}}_{t}\right)}$
-```
+$`\textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t,\Delta t} - \overline{\widehat{\textit{SOC}}}_{t}\right) = \textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t,\Delta t}\right) + \textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t}\right) - 2 \rho \cdot \sqrt{{var}\left(\overline{\widehat{\textit{SOC}}}_{t,\Delta t}\right)} \cdot \sqrt{{var}\left(\overline{\widehat{\textit{SOC}}}_{t}\right)}`$
 (Eq. 5 in the main text)
 
 Here we illustrate how to use estimates of the variance of the mean to
@@ -1666,20 +1663,20 @@ compute the uncertainty deduction under [VM0042 version
 2.1](https://verra.org/methodologies/vm0042-improved-agricultural-land-management-v2-1/).
 The variance computed in section V corresponds to the term:
 
-$\textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t}\right)$ = 0.006
+$`\textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t}\right)`$ = 0.006
 (in Eq. 5 of the main text)
 
 Assume that this procedure is repeated at a second point in time three
 years later, and the estimate is one third larger:
 
-$\textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t,\Delta t}\right)$
+$`\textit{var}\left(\overline{\widehat{\textit{SOC}}}_{t,\Delta t}\right)`$
 = 0.008 (in Eq. 5 of the main text)
 
 The covariance term in Eq. 5 of the main text may be conservatively
 ignored or estimated using a pseudo cross variogram. Assume this term
 has been estimated and is:
 
-$2\rho \cdot \sqrt{\textit{var}\left(\overline{\widehat{\text{SOC}}_{t+\Delta t}}\right)} \cdot \sqrt{\textit{var}\left(\overline{\widehat{\text{SOC}}_t}\right)}$
+$`2\rho \cdot \sqrt{\textit{var}\left(\overline{\widehat{\text{SOC}}_{t+\Delta t}}\right)} \cdot \sqrt{\textit{var}\left(\overline{\widehat{\text{SOC}}_t}\right)}`$
 = 0.0035 (which assumes that `rho` in Eq. 5 = 0.5)
 
 Using Eq. 5 in the main text, the variance of the mean stock change is
@@ -1703,7 +1700,7 @@ The figure below shows the probability distribution of the mean SOC
 change, and is similar to Figure 4 on page 85 of [VM0042 version
 2.1](https://verra.org/methodologies/vm0042-improved-agricultural-land-management-v2-1/).
 Using the standard deviation of the mean stock change
-(i.e. $\sqrt{0.0105} = 0.103$), the probability of exceedance method
+(i.e. $`\sqrt{0.0105} = 0.103`$), the probability of exceedance method
 results in a creditable amount of of 0.556 t of SOC / hectare, or a 7.3%
 deduction relative to the nominal value. If we decrease the monitoring
 period to 2 years or 1, resulting in a nominal sequestration rate of 0.4
