@@ -1722,8 +1722,9 @@ Your browser does not support PDFs. Please download the PDF to view it:
 </p>
 </object>
 <figcaption style="text-align: left; margin-top: 10px;">
-<strong>Figure 3: Probability of exceedance.</strong> The value for
-$`\bar{\Delta} \cdot t`$ used in the calculation of VCUs issued is
+<strong>Figure 3: Probability of exceedance.</strong>
+
+The value for $`\bar{\Delta} \cdot t`$ used in the calculation of VCUs issued is
 determined by applying an uncertainty deduction based on the 33.3rd
 percentile of the estimated probability distribution of
 $`\bar{\Delta} \cdot t`$. This variance of the probability distribution is
