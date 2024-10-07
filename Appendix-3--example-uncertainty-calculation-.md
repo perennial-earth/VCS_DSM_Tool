@@ -45,6 +45,8 @@ immediately follows this paragraph, which contains all the necessary
 code in a single location. Running the End-to-end code will reproduce
 all the calculations and graphics in the document.
 
+<details>
+<summary>Click to expand</summary>
 ``` r
 #End-to-end code block
 
@@ -133,6 +135,8 @@ simulate_soc <- function(polygon, ground_sample_distance=10,
                soc_stock_error=soc_stock_error, sigma=sigma))
 
 }
+<details>
+<summary>Click to expand</summary>
 
 # Major section III
 
@@ -1261,10 +1265,13 @@ This loop iterates over each sampled field and extracts the values from
 `soc_stock_error` and `sigma` at the random locations identified in step
 3. The extraction is performed using these lines:
 
+<details>
+<summary>Click to expand</summary>
 ``` r
 error <- terra::extract(fields_sim[[sample_index[i]]]$soc_stock_error, terra::vect(sampled_points_list[[i]]))[,2]
 sigma <- terra::extract(fields_sim[[sample_index[i]]]$sigma, terra::vect(sampled_points_list[[i]]))[,2]
 ```
+<details>
 
 The extracted values are combined with coordinate locations into a data
 frame. The data frame has four columns `error`,`sigma` `x`, and `y`.
