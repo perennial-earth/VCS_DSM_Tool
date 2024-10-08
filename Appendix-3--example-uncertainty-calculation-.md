@@ -1440,15 +1440,8 @@ the error sum of squares were used as a model selection criterion, the
 project proponent must report these values in the Model Validation
 Report, as stated in Section 5.3 of the tool.
 
-<div style="text-align: center;">
+![variogram](./components/variogram.jpg)
 
-<object data="variogram.pdf"
-          type="application/pdf" width="800" height="800">
-<p>
-Your browser does not support PDFs. Please download the PDF to view it:
-<a href="variogram.pdf">Download PDF</a>.
-</p>
-</object>
 <figcaption style="text-align: left; margin-top: 10px;">
 <strong>Figure 2: Example variograms.</strong> Three variogram models
 fitted to the standardized prediction error. In this case, the
@@ -1708,13 +1701,8 @@ value in each case.
 
 <div style="text-align: center;">
 
-<figure>
-<object data="probability_of_exceedance.pdf" type="application/pdf" width="800" height="350">
-<p>
-Your browser does not support PDFs. Please download the PDF to view it:
-<a href="probability_of_exceedance.pdf">Download PDF</a>.
-</p>
-</object>
+
+![probability of exceedance](./components/probability_of_exceedance.jpg)
 <figcaption style="text-align: left; margin-top: 10px;">
     <strong>Figure 3: Probability of exceedance.</strong> The value for
     $\bar{\Delta} \cdot t$ used in the calculation of VCUs issued is determined by applying
