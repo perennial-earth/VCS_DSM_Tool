@@ -284,7 +284,7 @@ focal_mean <- function(matrix_data, window_size = 5) {
 
 }
 
-pdf("geostatistical_simulation.pdf", width=12, height=12)
+pdf("components/geostatistical_simulation.pdf", width=12, height=12)
 par(mfrow=c(1,1), mar=c(1,1,1,1))
 
 the_matrix <- as.matrix(fields_sim[[1]]$soc_stock_hat)
@@ -390,7 +390,7 @@ SSE_nugget <- sum(vgm_model_nugget[1,2] - variogram_model$gamma)^2
 
 # geostatistical simulation figure
 
-pdf("variogram.pdf", width=6, height=6)
+pdf("geostatistical_simulation.pdf", width=6, height=6)
 plot(y=variogram_model$gamma, x=variogram_model$dist, pch=16, ylim=c(0,1.2), xlab="distance (meters)", ylab="semivariance")
 h <- seq(0, 1000, length.out = 100)
 gamma_values_exp <- exp_variogram(h, psill=vgm_model_exp[2,2], range=vgm_model_exp[2,3], nugget=vgm_model_exp[1,2])
@@ -1131,13 +1131,7 @@ $`\widehat{\text{SOC}}_{i,t}`$ (Eq. 1 in the main text).
 
 <div style="text-align: center;">
 
-<object data="geostatistical_simulation.pdf"
-          type="application/pdf" width="800" height="800">
-<p>
-Your browser does not support PDFs. Please download the PDF to view it:
-<a href="geostatistical_simulation.pdf">Download PDF</a>.
-</p>
-</object>
+![geostatistical simulation](./components/geostatistical_simulation.png)
 <figcaption style="text-align: left; margin-top: 10px;">
 <strong>Figure 1: Example geostatistical simulation.</strong> SOC stock
 for a single 320-acre field. The scale bar in the lower left is 200
