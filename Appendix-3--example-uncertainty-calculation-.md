@@ -1131,7 +1131,7 @@ $`\widehat{\text{SOC}}_{i,t}`$ (Eq. 1 in the main text).
 
 <div style="text-align: center;">
 
-![geostatistical simulation](./components/geostatistical_simulation.png)
+![geostatistical simulation](./components/geostatistical_simulation.jpg)
 <figcaption style="text-align: left; margin-top: 10px;">
 <strong>Figure 1: Example geostatistical simulation.</strong> SOC stock
 for a single 320-acre field. The scale bar in the lower left is 200
