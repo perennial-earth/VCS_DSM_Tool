@@ -1701,9 +1701,9 @@ value in each case.
 
 <div style="text-align: center;">
 
-
-![probability of exceedance](./components/probability_of_exceedance.jpg)
-<figcaption style="text-align: left; margin-top: 10px;">
+<figure>
+  <img src="./components/probability_of_exceedance.jpg" alt="probability of exceedance" width="50%">
+  <figcaption style="text-align: left; margin-top: 10px;">
     <strong>Figure 3: Probability of exceedance.</strong> The value for
     $\bar{\Delta} \cdot t$ used in the calculation of VCUs issued is determined by applying
     an uncertainty deduction based on the 33.3rd percentile of the estimated probability
